@@ -1,0 +1,122 @@
+import ayla from '/public/image/ayla.jpg';
+import crefin from '/public/image/crefin.jpg';
+import realEstate from '/public/image/real-estate.jpg';
+import travel from '/public/image/travel.jpg';
+
+export const projectsData = [
+    {
+        id: 1,
+        name: 'Zid Cash',
+        description: "Ultimate digital wallet for creating virtual cards, transferring funds, and managing deposits or withdrawals — all in one secure, seamless app.",
+        tools: ['Flutter', 'Dart', 'REST API', 'Payment Gateway'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.zidCach.app',
+        image: '',
+    },
+    {
+        id: 2,
+        name: 'Quran Kareem',
+        description: "The Holy Quran app is a digital version of the Quran designed with a clean, user-friendly interface, providing an intuitive experience for browsing and reading all chapters of the Quran.",
+        tools: ['Flutter', 'Dart', 'REST API'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.app.QuraanKareem',
+        image: '',
+    },
+    {
+        id: 3,
+        name: 'UFOO Driver',
+        description: "Step into the future of ride-hailing with UFOO Driver, the ultimate driving companion built for professionals in Saudi Arabia. Whether you're starting your journey or growing your income, UFOO equips you with everything you need to succeed on the road.",
+        tools: ['Flutter', 'Dart', 'Google Maps API', 'REST API'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.ufoDriver.app',
+        image: '',
+    },
+    {
+        id: 4,
+        name: 'Gebal Elrawasy - الجبال الرواسي',
+        description: "Gebal Alrwasay app is an application designed to facilitate worker transportation services during the Hajj season in the Kingdom of Saudi Arabia. It allows users to easily log in and access transportation services between hotels and Hajj centers.",
+        tools: ['Flutter', 'Dart', 'Firebase', 'Rest API'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=sa.gebalAlrwasay.app',
+        image: '',
+    },
+    {
+        id: 5,
+        name: 'P2P-Syria',
+        description: "P2P Syria is a robust financial management platform designed to help users handle their financial transactions securely and efficiently. The system supports internal transfers, withdrawals, and deposits at any time and from anywhere. It accommodates multiple currencies and transfer methods, tailored to each user's country.",
+        tools: ['Flutter', 'Dart', 'Firebase', 'Rest API', 'Payment Gateway'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.p2psyria.app',
+        image: '',
+    },
+    {
+        id: 6,
+        name: 'Lirat Wallet-محفظة ليرات',
+        description: "Lirat Wallet is a cutting-edge fintech application built to deliver a seamless and secure e-wallet experience for both individuals and businesses. It provides a suite of powerful financial services including multi-currency transactions, enterprise-grade security protocols, and an intuitive user interface that meets today’s digital finance expectations.",
+        tools: ['Flutter', 'Dart', 'Firebase', 'Rest API', 'Payment Gateway'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=store.lirat.paymoney',
+        image: '',
+    },
+    {
+        id: 7,
+        name: "Direct Chatting",
+        description: "A user-friendly app that allows you to quickly select a country code, enter any phone number, and start chatting instantly — all without needing to save the number in your contacts. Perfect for quick conversations or temporary chats.",
+        tools: ['Flutter', 'Dart', 'URL Launcher'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.ahmedaelghareeb.whatsapp_messaging',
+        image: '',
+    },
+    {
+        id: 8,
+        name: "Hadramout Hamza",
+        description: "Designed and developed a responsive multivendor web application to enhance the customer experience for a chain of restaurants. The application supports both desktop and mobile layouts and includes two key interfaces: a customer-facing website and an admin dashboard. Customer Website: Enabled users to browse dynamic restaurant menus and categorized sections, add meals to a shopping cart, and place customized orders. Integrated advanced ordering features such as delivery scheduling and in-branch table reservations. Admin Dashboard: Built a comprehensive admin panel for restaurant managers to manage menu sections and meal items, handle incoming orders with approval/decline workflows, and manage a custom order confirmation system. Included real-time notifications for new orders, and tools to launch special offers and discounts.",
+        tools: ['Flutter', 'Dart', 'Rest API', 'Firebase'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://hadramout-hamza.com/',
+        image: '',
+    },
+    {
+        id: 9,
+        name: "Thimar Driver",
+        description: "Contributed to the development of a mobile application tailored for licensed delivery drivers, designed to complement the Thimar e-commerce platform. The app streamlines the order fulfillment process by enabling drivers to efficiently manage deliveries, update order statuses, and ensure timely drop-offs.",
+        tools: ['Flutter', 'Dart', 'Google Maps API', 'REST API'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://github.com/AhmedAElghareeb/Thimar_Driver',
+        image: '',
+    },
+    {
+        id: 10,
+        name: "Thimar Client",
+        description: "Contributed to the development of a mobile e-commerce application designed to simplify the shopping experience for essential household items. The app enables users to browse and order a wide range of high-quality groceries—including fresh fruits, vegetables, and meats—directly from their smartphones.",
+        tools: ['Flutter', 'Dart', 'Google Maps API', 'REST API'],
+        role: 'Flutter Developer',
+        code: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.alalmiya.thamra&hl=ar',
+        image: '',
+    },
+];
+
+
+// Do not remove any property.
+// Leave it blank instead as shown below
+
+// {
+//     id: 1,
+//     name: '',
+//     description: "",
+//     tools: [],
+//     role: '',
+//     code: '',
+//     demo: '',
+//     image: crefin,
+// },

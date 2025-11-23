@@ -1,0 +1,161 @@
+.glow-container {
+  --spread: 60;
+}
+
+.glow-card {
+  --active: 0.15;
+  --start: 0;
+}
+
+.glow-card:is(:hover, :focus-visible) {
+  z-index: 2;
+}
+
+.glows {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  filter: blur(calc(var(--blur) * 1px));
+}
+
+.glows::after,
+.glows::before {
+  --alpha: 0;
+  content: "";
+  background: conic-gradient(from 180deg at 50% 70%,
+      #02569B 0deg,
+      #54C5F8 72.0000010728836deg,
+      #02569B 144.0000021457672deg,
+      #01407A 216.00000858306885deg,
+      #02569B 288.0000042915344deg,
+      #0175C2 1turn);
+  background-attachment: fixed;
+  position: absolute;
+  inset: -5px;
+  border: 8px solid transparent;
+  border-radius: 12px;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg),
+      #000 0deg,
+      #fff,
+      #0000 calc(var(--spread) * 1deg));
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+
+/* Dark mode glow effects */
+.dark .glows::after,
+.dark .glows::before {
+  background: conic-gradient(from 180deg at 50% 70%,
+      #54C5F8 0deg,
+      #42A5F5 72.0000010728836deg,
+      #54C5F8 144.0000021457672deg,
+      #0175C2 216.00000858306885deg,
+      #54C5F8 288.0000042915344deg,
+      #E3F2FD 1turn);
+}
+
+.glow-card::before {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  content: "";
+  border-radius: 12px;
+  pointer-events: none;
+  background: #02569B;
+  background-attachment: fixed;
+  border-radius: 12px;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
+      #02569B26 0deg,
+      #02569B,
+      #02569B26 calc(var(--spread) * 2.5deg));
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+
+/* Dark mode glow card before */
+.dark .glow-card::before {
+  background: #5A9FD4;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
+      #54C5F826 0deg,
+      #54C5F8,
+      #54C5F826 calc(var(--spread) * 2.5deg));
+}
+
+.glow-card::after {
+  --bg-size: 100%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: conic-gradient(from 180deg at 50% 70%,
+      #02569B 0deg,
+      #54C5F8 72.0000010728836deg,
+      #02569B 144.0000021457672deg,
+      #01407A 216.00000858306885deg,
+      #02569B 288.0000042915344deg,
+      #0175C2 1turn);
+  background-attachment: fixed;
+  border-radius: 12px;
+  opacity: var(--active, 0);
+  transition: opacity 1s;
+  --alpha: 0;
+  inset: 0;
+  border: 2px solid transparent;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg),
+      #0000 0deg,
+      #fff,
+      #0000 calc(var(--spread) * 0.5deg));
+  filter: brightness(1.2);
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+}
+
+/* Dark mode glow card after */
+.dark .glow-card::after {
+  background: conic-gradient(from 180deg at 50% 70%,
+      #54C5F8 0deg,
+      #42A5F5 72.0000010728836deg,
+      #54C5F8 144.0000021457672deg,
+      #0175C2 216.00000858306885deg,
+      #54C5F8 288.0000042915344deg,
+      #E3F2FD 1turn);
+  filter: brightness(1.5);
+}
+
+/* Intense Glow Card Styles */
+.intense-glow-card {
+  --active: 0.2;
+  --start: 0;
+}
+
+.intense-glow-card:is(:hover, :focus-visible) {
+  z-index: 3;
+  transform: scale(1.02);
+}
+
+/* Subtle Glow Card Styles */
+.subtle-glow-card {
+  --active: 0.08;
+  --start: 0;
+}
+
+.subtle-glow-card:is(:hover, :focus-visible) {
+  z-index: 1;
+  transform: translateY(-2px);
+}
+
+/* Simple hover effects for skill cards */
+.skill-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card-hover:hover {
+  transform: translateY(-2px);
+}

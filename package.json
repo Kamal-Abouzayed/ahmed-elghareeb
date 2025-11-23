@@ -1,0 +1,31 @@
+{
+  "name": "developer-portfolio",
+  "description": "Portfolio of Abu Said",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.3.1",
+    "lottie-react": "^2.4.0",
+    "next": "^15.3.3",
+    "prism-react-renderer": "^2.4.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-fast-marquee": "^1.6.2",
+    "react-icons": "^4.11.0",
+    "react-toastify": "^10.0.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.3.3",
+    "autoprefixer": "^10.4.21",
+    "postcss": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "sass": "^1.69.5"
+  }
+}

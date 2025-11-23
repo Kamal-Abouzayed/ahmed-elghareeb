@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme variables */
+  --foreground-rgb: 30, 41, 59; /* slate-800 */
+  --background-rgb: 255, 255, 255; /* white */
+  --surface-rgb: 248, 250, 252; /* slate-50 */
+  --accent-rgb: 14, 165, 233; /* sky-500 */
+}
+
+.dark {
+  /* Dark theme variables */
+  --foreground-rgb: 241, 245, 249; /* slate-100 */
+  --background-rgb: 13, 18, 36; /* custom dark blue */
+  --surface-rgb: 30, 41, 59; /* slate-800 */
+  --accent-rgb: 22, 242, 179; /* custom green */
+}
+
+/* Smooth transitions for theme changes */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent transition on page load */
+.preload * {
+  transition: none !important;
+}
+
+html {
+  /* Prevent flash of unstyled content */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+html.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  /* Ensure smooth scrolling */
+  scroll-behavior: smooth;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+
+  /* Enhanced dotted pattern overlay */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 45, 32, 0.25) 1px, transparent 0),
+    radial-gradient(circle at 8px 8px, rgba(255, 45, 32, 0.15) 1px, transparent 0);
+  background-size: 20px 20px, 40px 40px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Enhanced dark mode pattern with Laravel colors */
+.dark body {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(22, 242, 179, 0.2) 1px, transparent 0),
+    radial-gradient(circle at 8px 8px, rgba(22, 242, 179, 0.08) 1px, transparent 0);
+  background-size: 20px 20px, 40px 40px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Additional dots pattern for content sections */
+.dots-pattern {
+  position: relative;
+}
+
+.dots-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(255, 45, 32, 0.06) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark .dots-pattern::before {
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(22, 242, 179, 0.04) 1px, transparent 0);
+}
+
+/* Animated dots for hero sections */
+.animated-dots {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-dots::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 45, 32, 0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+  animation: dotsMove 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark .animated-dots::after {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(22, 242, 179, 0.06) 1px, transparent 0);
+}
+
+@keyframes dotsMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}
+
+// #sticky-card-1 {
+//   --index: 1;
+// }
+
+// #sticky-card-2 {
+//   --index: 2;
+// }
+
+// #sticky-card-3 {
+//   --index: 3;
+// }
+
+// #sticky-card-4 {
+//   --index: 4;
+// }
+
+.sticky-card {
+  // padding-top: calc(var(--index) * 2.5rem);
+  top: calc(var(--index) * 4rem);
+}
