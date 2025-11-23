@@ -4,7 +4,7 @@ import { skillsData } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import { useState } from "react";
-import GlowCard from "../helper/glow-card";
+import GlowCard from "@/app/components/helper/glow-card";
 
 const EnhancedSkills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
-import GlowCard from '../../helper/glow-card';
+import GlowCard from '@/app/components/helper/glow-card';
 
 function ContactForm() {
   const [input, setInput] = useState({

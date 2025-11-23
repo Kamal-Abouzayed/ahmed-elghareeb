@@ -1,7 +1,7 @@
 import { projectsData } from '@/utils/data/projects-data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import GlowCard from '../../components/helper/glow-card';
+import GlowCard from '@/app/components/helper/glow-card';
 import Image from 'next/image';
 
 export async function generateStaticParams() {

@@ -2,8 +2,8 @@
 
 import { experiences } from "@/utils/data/experience";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "./helper/animation-lottie";
-import GlowCard from "./helper/glow-card";
+import AnimationLottie from "@/app/components/helper/animation-lottie";
+import GlowCard from "@/app/components/helper/glow-card";
 import experience from '/public/lottie/code.json';
 
 function ExperienceComponent() {

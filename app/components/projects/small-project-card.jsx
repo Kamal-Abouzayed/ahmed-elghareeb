@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import GlowCard from "../helper/glow-card";
+import GlowCard from "@/app/components/helper/glow-card";
 
 function SmallProjectCard({ project }) {
   return (

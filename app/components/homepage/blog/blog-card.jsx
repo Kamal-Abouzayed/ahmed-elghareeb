@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsHeartFill } from 'react-icons/bs';
 import { FaCommentAlt } from 'react-icons/fa';
-import GlowCard from '../../helper/glow-card';
+import GlowCard from '@/app/components/helper/glow-card';
 
 function BlogCard({ blog }) {
 
