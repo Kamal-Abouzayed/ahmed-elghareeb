@@ -2,20 +2,20 @@
 
 import { experiences } from "@/utils/data/experience";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
-import GlowCard from "../../helper/glow-card";
+import AnimationLottie from "./helper/animation-lottie";
+import GlowCard from "./helper/glow-card";
 import experience from '/public/lottie/code.json';
 
-function Experience() {
+function ExperienceComponent() {
   return (
-    <div id="experience" className="relative z-50 my-12 border-t lg:my-24 duration-400">
+    <div className="my-12 lg:my-24 duration-400">
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
           <div className="h-[1px] bg-gradient-to-r from-transparent via-flutterBlue to-transparent w-full" />
         </div>
       </div>
-      
+
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-flutterBlue dark:bg-[#1a1443] transition-colors duration-400"></span>
@@ -71,4 +71,4 @@ function Experience() {
   );
 };
 
-export default Experience;
+export default ExperienceComponent;
